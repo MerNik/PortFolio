@@ -1,0 +1,43 @@
+{
+  "name": "startproject",
+  "version": "1.0.0",
+  "description": "Starting Build",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery" : "latest",
+    "node-normalize-scss": "latest"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.2.3",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-imagemin": "^4.0.0",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.1.1",
+    "imagemin-pngquant": "^5.0.1",
+    "rimraf": "^2.3.1",
+    "gulp-pug": "^3.3.0",
+    "webpack": "latest",
+    "gulp-svg-sprite": "latest",
+    "gulp-svgmin": "latest",
+    "gulp-cheerio": "latest",
+    "gulp-replace": "latest"
+  },
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Junglecrew/StartProject.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Junglecrew/StartProject/issues"
+  },
+  "homepage": "https://github.com/Junglecrew/StartProject#readme"
+}
