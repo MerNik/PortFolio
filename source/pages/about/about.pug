@@ -1,0 +1,81 @@
+extends ../base
+
+block head
+    meta(charset="UTF-8")
+    title Обо мне
+block content
+    header.about-header
+        block header
+        include ../includes/_header/_header
+    section.about-main
+        .about-figure-cut
+            include ../../img/bg-about.svg
+        .about-content
+            .about-left-side
+                .side-title
+                    h2.side-title__text
+                        | Обо мне
+                    hr.side-title__hr
+                .side-descr
+                    .side-decsr__avatar
+                        .avatar-img(style="background-image: url('images/avatar-about.jpg'); background-position: 77% 0%;  background-size: cover; transform:scale(-1, 1);")
+                        img.visuallyHidden(src=require("../../img/avatar-about.jpg"))
+                    .subtitle
+                        h3.subtitle__text
+                            | Кто я
+                        hr.subtitle__hr
+                    p.side-descr__info
+                        | Я начинающий веб разработчик
+                        | Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                    p.side-descr__info
+                        | Этот сайт сделан в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+            .about-right-side
+                .side-descr
+                    .subtitle
+                        h3.subtitle__text
+                            | Чем я могу помочь
+                        hr.subtitle__hr
+                .side-content
+                    p.side-descr__info
+                        | Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend.
+
+                ul.skills-list
+                    each item in ['Frontend', 'Backend', 'Workflow']
+                        li.skills-list__item
+                            .skills-row
+                                .skills-row__title #{item}
+                                ul.skills-row__list
+                                    each skill in ['Html5', 'css3', 'JavaScript']
+                                        li.skills-row__item
+                                            .skill
+                                                svg.skill__circle
+                                                .skill__title #{skill}
+    section.map
+        include ../includes/_map/_map
+        .map__data
+            .contacts
+                .contacts__title
+                    .subtitle.subtitle_contacts
+                        h3.subtitle__text
+                            | Контакты
+                        hr.subtitle__hr
+                ul.contacts__list
+                    -
+                        var contacts = [
+                        ['skype','babylonbwoy_sc2'],
+                        ['envelope2','junglecrew@gmail.com'],
+                        ['phone2','+79316050106'],
+                        ['map_marker','Калининград, Московский пр-т, 40'],
+                        ]
+                    each contact in contacts
+                        li.contacts__item
+                            .contacts-row
+                                .contacts-row__icon
+                                    a(href="#"): +icon(contact[0],'green-mod')
+                                .contacts-row__content #{contact[1]}
+
+
+
+
+        block footer
+        include ../includes/_footer/_footer

@@ -1,0 +1,143 @@
+@import '../../style/main.scss';
+@import '../includes/_header/_header.scss';
+@import '../includes/_footer/_footer.scss';
+@import '../includes/_map/_map.scss';
+
+.about-header {
+  background-image: url('../../img/main_bg.jpg');
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+
+}
+
+.about-figure-cut {
+  // position: absolute;
+  z-index: 0;
+  bottom: 0;
+  width: 100%;
+  margin-top: -10%;
+  margin-bottom: -5px;
+  // height: 180px;
+}
+
+.traingle .left{
+  fill: #ebefe2;
+}
+.traingle .right{
+  fill: #f4f5f0;
+}
+
+.about-content {
+  display: flex;
+  height: 100%;
+  width: 100%;
+
+}
+
+.about-left-side {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  background-color: #ebefe2;
+}
+.about-right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  background-color: #f4f5f0;
+}
+
+.side-title {
+  display: block;
+  margin: 5px auto 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  &__text {
+    font-size: 63px;
+    line-height: 53px;
+    font-family: $titles;
+    text-transform: uppercase;
+    margin: 0 auto;
+    Color: #373e42;
+  }
+  &__hr {
+    margin: 30px auto;
+    width: 90px;
+    border-bottom: 3px solid #373e42;
+  }
+}
+
+.side-descr {
+  margin: 0 20px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-content {
+  margin: 0 60px 0 40px;
+}
+
+.subtitle {
+  &__text {
+    font-family: $titles;
+    font-size: 35px;
+    color: #566358;
+    text-align: center;
+    margin: 0;
+  }
+  &__hr {
+    margin: 20px auto;
+    width: 90px;
+    border-bottom: 3px solid #566358;
+  }
+}
+
+.subtitle_contacts {
+  margin-top: 20px;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 390px;
+  overflow: hidden;
+}
+
+.side-descr__info {
+  line-height: 24px;
+  color: #566358;
+  margin: 0;
+}
+
+.map {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.map__data {
+  width: 380px;
+  height: 310px;
+  background-color: rgba(244,245,240,.85);
+  border-radius: 10px;
+  z-index: 10;
+  font-family: $mediumfont;
+}
+
+.contacts__item {
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+
+.contacts-row {
+  display: flex;
+  &__icon {
+    margin-right: 10px;
+  }
+}

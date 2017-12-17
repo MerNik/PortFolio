@@ -1,0 +1,19 @@
+.top-bar
+    .socials.socials__top
+        ul.social__list
+            li.social__item
+                +icon('vk','white-mod')
+            li.social__item
+                +icon('github','white-mod')
+            li.social__item
+                +icon('in','white-mod')
+    .hamburger-menu
+        +icon('hamburger','white-mod')
+.works-intro
+    .avatar.auth-intro__avatar
+        .avatar__pic(style="background-image: url('images/avatar.jpg'); background-position: 79% 0%;  background-size: 350%")
+        img.visuallyHidden(src=require("../../img/avatar.jpg"))
+    .auth-intro__name
+        | Никитина Мария
+    .auth-intro__descr
+        | Личный сайт веб разработчика

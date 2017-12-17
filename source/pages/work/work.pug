@@ -1,0 +1,42 @@
+extends ../base
+
+block head
+    meta(charset="UTF-8")
+    title Мои работы
+block content
+    section.works-section
+        block header
+        include ../includes/_header/_header
+        //- .auth-intro__name
+        //- 	| Дмитрий Петров
+        //- .auth-intro__descr
+        //- 	| Личный сайт веб разработчика
+        .arrow-down.arrow-down__works
+            a(href="#"): +icon('arrow_down')
+        .section-title
+            h2.section-title__text
+                | Мои работы
+            hr.section-title__hr
+        .figure-cut
+    section.works-slider
+        .works-slider__left
+        .works-slider__right
+    section.reviews-section
+        .section-title
+            h2.section-title__text
+                | Что обо мне говорят
+            hr.section-title__hr
+        .reviews
+            ul.reviews__list
+                li.reviews__item
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum ex, non natus. Fugit tempore officiis aliquam, temporibus excepturi deleniti molestiae, quaerat, odit, sed ratione explicabo impedit laboriosam cumque iure recusandae.
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum ex, non natus. Fugit tempore officiis aliquam, temporibus excepturi deleniti molestiae, quaerat, odit, sed ratione explicabo impedit laboriosam cumque iure recusandae.
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum ex, non natus. Fugit tempore officiis aliquam, temporibus excepturi deleniti molestiae, quaerat, odit, sed ratione explicabo impedit laboriosam cumque iure recusandae.
+                li.reviews__item
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum ex, non natus. Fugit tempore officiis aliquam, temporibus excepturi deleniti molestiae, quaerat, odit, sed ratione explicabo impedit laboriosam cumque iure recusandae.
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum ex, non natus. Fugit tempore officiis aliquam, temporibus excepturi deleniti molestiae, quaerat, odit, sed ratione explicabo impedit laboriosam cumque iure recusandae.
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum ex, non natus. Fugit tempore officiis aliquam, temporibus excepturi deleniti molestiae, quaerat, odit, sed ratione explicabo impedit laboriosam cumque iure recusandae.
+        .feedback
+            form.feedback-form
+
+        include ../includes/_footer/_footer

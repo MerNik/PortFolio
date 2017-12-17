@@ -1,0 +1,103 @@
+.top-bar {
+  padding-top: 28px;
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+}
+
+.socials {
+  width: 140px;
+  &__index {
+    margin: 0 auto;
+  }
+  &__top {
+    width: 138px;
+    margin: 0 0 0 30px;
+  }
+}
+
+.social__list {
+  display: flex;
+  // justify-content: space-between;
+}
+
+.social__item {
+  margin-right: 25px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.hamburger-menu {
+  margin-right: 30px;
+}
+
+.icon {
+  height: 22px;
+  width: 30px;
+  transition: .2s;
+  &.standard-mod {
+    fill:#8e9c99;
+  }
+
+  &.white-mod {
+    fill: #fff;
+  }
+  &.green-mod {
+    fill: $green;
+  }
+  &.footer-mod {
+    fill:#8e9c99;;
+    &:hover {
+      fill: #fff;
+    }
+  }
+
+  &:hover {
+    fill: $green;
+    cursor: pointer;
+
+  }
+}
+
+.works-intro {
+  margin: 0 auto;
+  border-radius: 5px;
+  width: 380px;
+  height: 295px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-top: 0px;
+}
+
+.avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatar__pic {
+  width: 140px;
+  height: 140px;
+}
+
+.auth-intro__avatar{
+  margin: 38px auto 20px;
+}
+
+.auth-intro__name {
+  color: #fff;
+  font-size: 28px;
+  font-family: $mediumfont;
+  line-height: 34px;
+  font-smoothing: antialiased;
+  margin: 0 auto 10px;
+
+}
+
+.auth-intro__descr {
+  color: #fff;
+  font-family: $mediumfont;
+  margin: 0 auto 35px;
+}
