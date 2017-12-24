@@ -1,27 +1,3 @@
-// Импорт normalize из node-modules
-// @import "normalize";
-
-// импортируем шрифты
-// @import "fonts.scss";
-
-//Определяем основные переменные
-//Цвета
-
-// $green: #6c9c5a;
-// $lightgreen: #4e8839;
-// $darkgreen: #566358;
-// $gray: #373e42;
-// $error: #e44845;
-
-// 	//Шрифты
-// $mainfont: 'robotoregular';
-// $mediumfont: 'robotomedium';
-// $titles: 'sansus_webissimoregular';
-
-
-
-
-// Импортируем файл со стилями общий для всех страниц (цвета, шрифты и тд)
 @import '../../style/main.scss';
 
 
@@ -34,6 +10,9 @@ body {
   background-size: cover;
   height: 100vh;
   position: relative;
+  @include phones() {
+    height: auto;
+  }
   // &::before {
   // 	background: transparent;
   //    background: linear-gradient(to bottom, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, 0.1) 100%);
@@ -78,19 +57,25 @@ body {
   color: #fff;
   font-family: $mediumfont;
   transition: .2s;
+  // @include phones() {
+  // position: relative;
+
+  // }
   &:hover {
     background-color: $lightgreen;
     border-color: #538643;
     cursor: pointer;
-
   }
 }
 
 .auth {
-  margin: 0 auto;
-  &-intro {
+  // margin: 0 auto;
+
+  &__intro {
+    margin: 0 auto;
     border-radius: 5px;
     width: 380px;
+    max-width: 80%;
     height: 395px;
     display: flex;
     flex-direction: column;
@@ -113,11 +98,11 @@ body {
 
 
 
-.auth-intro__avatar{
+.auth__avatar{
   margin: 38px auto 20px;
 }
 
-.auth-intro__name {
+.auth__name {
   color: #fff;
   font-size: 28px;
   font-family: $mediumfont;
@@ -127,14 +112,14 @@ body {
 
 }
 
-.auth-intro__descr {
+.auth__descr {
   color: #fff;
   opacity: .8;
   font-family: $mediumfont;
   margin: 0 auto 35px;
 }
 
-.auth-intro__socials {
+.auth__socials {
   margin-bottom: 40px;
 }
 
@@ -227,18 +212,230 @@ body {
   }
 }
 
+.auth-backside {
+  max-width: 380px;
+  height: 420px;
+  background-color: rgba(18,38,32,.6);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  @include phones() {
+    height: auto;
+  }
+
+}
+
+.subtitle {
+  color: #566358;
+  &__text {
+    font-family: $titles;
+    font-size: 35px;
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  &::after {
+    display: block;
+    content: "";
+    margin: 20px auto;
+    width: 90px;
+    border-bottom: 3px solid #566358;
+  }
+}
+.subtitle__intro {
+  padding-top: 35px;
+  color: #fff;
+  &::after {
+    display: block;
+    content: "";
+    margin: 35px auto;
+    width: 90px;
+    border-bottom: 3px solid #fff;
+  }
+}
+
+.auth-form {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.auth-form__elem {
+  position: relative;
+  display: flex;
+  margin: 0 20px;
+  width: 90%;
+  &:before {
+    content: "";
+    display: inline;
+    width: 45px;
+    height: 45px;
+    border-top-left-radius: 22px;
+    border-bottom-left-radius: 22px;
+    background-color: #f0efe9;
+  }
+}
+
+.login-main {
+  fill: red;
+}
+
+.auth-form__check {
+  display: block;
+  margin: 0 20px 20px;
+  width: 80%;
+  text-align: center;
+}
+
+.auth-form__input {
+  height: 45px;
+  border: 0px solid;
+  border-top-right-radius: 22px;
+  border-bottom-right-radius: 22px;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 17px 17px;
+  box-sizing: border-box;
+  resize: none;
+  outline: 0;
+  color: $darkgreen;
+  &::placeholder {
+    opacity: .5;
+  }
+  &:focus {
+    border: 1px solid $green;
+  }
+}
+
+.auth-form__question {
+  margin: 0 20px 15px;
+  font-family: $bold;
+}
+
+.auth-form__radios {
+  display: flex;
+  justify-content: space-around;
+  @include phones() {
+    margin-bottom: 35px;
+  }
+}
+
+.auth-form__radio {
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+input[type="radio"], input[type="checkbox"]{
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 0.0625rem;
+  width: 0.0625rem;
+  margin: -0.0625rem;
+  padding: 0;
+  border: 0;
+
+}
+
+input[type="checkbox"] + label span {
+  display:inline-block;
+  margin-right: 10px;
+  margin-top: -1px;
+  width:21px;
+  height:21px;
+  vertical-align:top;
+  background: url('../../img/checkbox_radio/Check_sprite.png') -21px top no-repeat;
+  border-radius: 2px;
+  cursor:pointer;
+  box-sizing: border-box;
+}
+
+input[type="checkbox"]:checked + label span {
+  background: url('../../img/checkbox_radio/Check_sprite.png') 0px top no-repeat;
+  transition: .5;
+}
+input[type="checkbox"]:focus + label span{
+  box-shadow: 0 0 10px $green;
+}
+
+input[type="radio"]:focus + label .answer {
+  border: 1px dotted $green;
+}
+
+input[type="radio"] + label .custom {
+  display:inline-block;
+  margin-right: 10px;
+  margin-top: 1px;
+  width:20px;
+  height:20px;
+  vertical-align:top;
+  background: url('../../img/checkbox_radio/radio.png') -1px top no-repeat;
+  cursor:pointer;
+}
+
+input[type="radio"]:checked + label .custom {
+  background: url('../../img/checkbox_radio/radio.png') -21px top no-repeat;
+  transition: .5;
+}
+
+input[type="radio"]:checked + label .custom +.answer{
+  color: $green;
+
+}
 
 
 
+.auth-form__controls {
+  width: 100%;
+  height: 45px;
+  position: absolute;
+  bottom: -45px;
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  justify-content: space-between;
+}
 
-
-
-
+.btn {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto;
+  height: 45px;
+  background-color: $green;
+  transition: .2s;
+  border:0;
+  border-right: 2px solid #a6bda3;
+  border-radius: 0 0 0 5px;
+  align-items: center;
+  &:hover {
+    background-color: #538643;
+    cursor: pointer;
+  }
+  &:last-child {
+    border: 0px;
+    border-radius: 0 0 5px 0;
+  }
+  span {
+    display: block;
+    color: #fff;
+    text-align: center;
+    font-family: $mediumfont;
+  }
+}
 
 .wellcome-footer {
   color: #fff;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
+  &__text {
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
 
 }

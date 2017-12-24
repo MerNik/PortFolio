@@ -2,9 +2,11 @@ include  ./_mixins.pug
 doctype html
 html
     head
+        link(rel="shortcut icon", href=require("../../img/fav_forest.png"), type="image/png")
         meta(charset = 'utf-8')
         meta(name='viewport', content="initial-scale=1.0, width=device-width")
         block head
     body
+        block variables
         block content
         block header

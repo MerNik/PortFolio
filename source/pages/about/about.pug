@@ -1,5 +1,7 @@
 extends ../base
-
+block variables
+    - name = 'Никитина Мария'
+    - descr = 'Личный сайт веб разработчика'
 block head
     meta(charset="UTF-8")
     title Обо мне
@@ -13,19 +15,22 @@ block content
         .about-content
             .about-left-side
                 .side-title
-                    h2.side-title__text
-                        | Обо мне
-                    hr.side-title__hr
+                    .section-title.section-title_about
+                        h1.section-title__text
+                            | Обо мне
+                    .section-title__shadow.section-title__shadow_about-section
+                        +shadowTitle('about_header','header_style')
                 .side-descr
                     .side-decsr__avatar
-                        .avatar-img(style="background-image: url('images/avatar-about.jpg'); background-position: 77% 0%;  background-size: cover; transform:scale(-1, 1);")
-                        img.visuallyHidden(src=require("../../img/avatar-about.jpg"))
-                    .subtitle
-                        h3.subtitle__text
-                            | Кто я
-                        hr.subtitle__hr
+                        .avatar-img(style="background-image: url('images/main-avatar.jpg'); background-position: 44% 0%;  background-size: cover;")
+                        img.visuallyHidden(src=require("../../img/main-avatar.jpg"))
+                    .side-descr__title
+                        .subtitle
+                            h3.subtitle__text
+                                | Кто я
+                            //- hr.subtitle__hr
                     p.side-descr__info
-                        | Я начинающий веб разработчик
+                        | Я веб разработчик из Санкт-Петербурга
                         | Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
                     p.side-descr__info
                         | Этот сайт сделан в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
@@ -33,23 +38,12 @@ block content
                 .side-descr
                     .subtitle
                         h3.subtitle__text
-                            | Чем я могу помочь
-                        hr.subtitle__hr
+                            | Чем я могу быть вам полезен
                 .side-content
                     p.side-descr__info
-                        | Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend.
+                        | Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+                include ../includes/_skills/_skills
 
-                ul.skills-list
-                    each item in ['Frontend', 'Backend', 'Workflow']
-                        li.skills-list__item
-                            .skills-row
-                                .skills-row__title #{item}
-                                ul.skills-row__list
-                                    each skill in ['Html5', 'css3', 'JavaScript']
-                                        li.skills-row__item
-                                            .skill
-                                                svg.skill__circle
-                                                .skill__title #{skill}
     section.map
         include ../includes/_map/_map
         .map__data
@@ -58,13 +52,15 @@ block content
                     .subtitle.subtitle_contacts
                         h3.subtitle__text
                             | Контакты
-                        hr.subtitle__hr
                 ul.contacts__list
                     -
-
-
-
-
+                        var contacts = [
+                        ['skype','babylonbwoy_sc2'],
+                        ['envelope2','junglecrew@gmail.com'],
+                        ['phone2','+79316050106'],
+                        ['map_marker','Калининград, Московский пр-т, 40'],
+                        ]
+                    each contact in contacts
                         li.contacts__item
                             .contacts-row
                                 .contacts-row__icon

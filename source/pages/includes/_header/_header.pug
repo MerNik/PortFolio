@@ -10,10 +10,14 @@
     .hamburger-menu
         +icon('hamburger','white-mod')
 .works-intro
-    .avatar.auth-intro__avatar
-        .avatar__pic(style="background-image: url('images/avatar.jpg'); background-position: 79% 0%;  background-size: 350%")
-        img.visuallyHidden(src=require("../../img/avatar.jpg"))
-    .auth-intro__name
-        | Никитина Мария
-    .auth-intro__descr
-        | Личный сайт веб разработчика
+    .works-intro__info
+        .avatar.auth-intro__avatar
+            .avatar__pic(style="background-image: url('images/main-avatar.jpg'); background-position: 44% 0%;  background-size: 150%")
+            img.visuallyHidden(src=require("../../img/main-avatar.jpg"))
+        .auth-intro__name
+            | #{name}
+        .auth-section__title
+            h2.auth-section__text
+                | #{title}
+        .auth-intro__descr
+            | #{descr}

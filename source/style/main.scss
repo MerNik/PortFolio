@@ -1,3 +1,28 @@
+// resolutions
+$desktop: 75rem;
+$laptop: 1200px;
+$tablets: 768px;
+$phones: 550px;
+
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: $laptop) {
+    @content;
+  }
+}
+
+
 $green: #6c9c5a;
 $lightgreen: #4e8839;
 $darkgreen: #566358;
@@ -12,12 +37,15 @@ $light: 'robotolight';
 $lightitalic: 'robotolight_italic';
 $bold: 'robotobold';
 $bolditalic: 'robotobold_italic';
+$italic: 'robotoitalic';
 
 
 * {
   font-size: 16px;
   font-family: $mainfont;
-  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  outline: none;
 }
 
 blockquote p {
@@ -48,6 +76,10 @@ ul {
   margin: 0;
 }
 
+h1,h2,h3 {
+  font-weight: 300;
+}
+
 
 .visuallyHidden {
   position: absolute;
@@ -59,4 +91,46 @@ ul {
   padding: 0;
   border: 0;
   opacity: 0;
+}
+
+
+.icon {
+  height: 22px;
+  width: 30px;
+  transition: .2s;
+  &.standard-mod {
+    fill:#8e9c99;
+  }
+
+  &.white-mod {
+    fill: #fff;
+  }
+  &.green-mod {
+    fill: $green;
+  }
+  &.footer-mod {
+    fill:#8e9c99;;
+    &:hover {
+      fill: #fff;
+    }
+  }
+  &.login-main {
+    position: absolute;
+    height: 15px;
+    top: 15px;
+    left: 8px;
+    fill: #c4cbcd;
+  }
+  &.password-main {
+    position: absolute;
+    height: 15px;
+    top: 15px;
+    left: 8px;
+    fill: #c4cbcd;
+  }
+  &:hover {
+    fill: $green;
+    cursor: pointer;
+  }
+
 }

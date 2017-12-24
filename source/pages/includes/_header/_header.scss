@@ -31,41 +31,41 @@
   margin-right: 30px;
 }
 
-.icon {
-  height: 22px;
-  width: 30px;
-  transition: .2s;
-  &.standard-mod {
-    fill:#8e9c99;
-  }
+// .icon {
+// 	height: 22px;
+// 	width: 30px;
+// 	transition: .2s;
+// 	&.standard-mod {
+// 		fill:#8e9c99;
+// 	}
 
-  &.white-mod {
-    fill: #fff;
-  }
-  &.green-mod {
-    fill: $green;
-  }
-  &.footer-mod {
-    fill:#8e9c99;;
-    &:hover {
-      fill: #fff;
-    }
-  }
+// 	&.white-mod {
+// 		fill: #fff;
+// 	}
+// 	&.green-mod {
+// 		fill: $green;
+// 	}
+// 	&.footer-mod {
+// 		fill:#8e9c99;;
+// 		&:hover {
+// 			fill: #fff;
+// 		}
+// 	}
 
-  &:hover {
-    fill: $green;
-    cursor: pointer;
+// 	&:hover {
+// 		fill: $green;
+// 		cursor: pointer;
 
-  }
-}
+// 	}
+// }
 
 .works-intro {
   margin: 0 auto;
   border-radius: 5px;
-  width: 380px;
-  height: 295px;
+  height: 80%;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   overflow: hidden;
   margin-top: 0px;
 }
@@ -83,7 +83,7 @@
 }
 
 .auth-intro__avatar{
-  margin: 38px auto 20px;
+  margin: 0 auto 20px;
 }
 
 .auth-intro__name {
@@ -93,11 +93,63 @@
   line-height: 34px;
   font-smoothing: antialiased;
   margin: 0 auto 10px;
+  text-align: center;
+
+
 
 }
 
-.auth-intro__descr {
+.auth-intro__descr, .auth-intro__title {
   color: #fff;
   font-family: $mediumfont;
-  margin: 0 auto 35px;
+  // margin: 0 auto 35px;
+  text-align: center;
+}
+
+.auth-intro__title {
+  display: block;
+  z-index: 1;
+  &__text {
+    font-size: 63px;
+    line-height: 53px;
+    font-family: $titles;
+    text-transform: uppercase;
+    margin: 0;
+    text-align: center;
+  }
+  &__hr {
+    margin: 30px auto;
+    width: 90px;
+    border-bottom: 3px solid black;
+  }
+}
+
+.works-intro__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.auth-section {
+  &__title {
+    position: relative;
+    display: block;
+    z-index: 1;
+    &::after {
+      display: block;
+      content: "";
+      margin: 35px auto;
+      width: 90px;
+      border-bottom: 3px solid #fff;
+    }
+  }
+  &__text {
+    font-size: 63px;
+    color: #fff;
+    line-height: 53px;
+    font-family: $titles;
+    text-transform: uppercase;
+    margin: 0 auto;
+    text-align: center;
+  }
 }

@@ -2,3 +2,8 @@ mixin icon(name,mod)
     - mod = mod || ''
     svg(class="icon icon-" + name + ' ' + mod)
         use(xlink:href=require("../../img/sprite.svg") + "#" + name)
+
+mixin shadowTitle(name,mod)
+    - mod = mod || ''
+    svg(class="shadowTitle shadowTitle-" + name + ' ' + mod)
+        use(xlink:href=require("../../img/sprite.svg") + "#" + name)

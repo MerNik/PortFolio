@@ -8,15 +8,15 @@ block content
             button.auth-button
                 | Авторизоваться
             .auth
-                .auth-intro
-                    .avatar.auth-intro__avatar
-                        .avatar__pic(style="background-image: url('images/avatar.jpg'); background-position: 79% 0%;  background-size: 350%")
-                        img.visuallyHidden(src=require("../../img/avatar.jpg"))
-                    .auth-intro__name
+                .auth__intro
+                    .avatar.auth__avatar
+                        .avatar__pic(style="background-image: url('images/main-avatar.jpg'); background-position: 44% 0%;  background-size: 150%")
+                        img.visuallyHidden(src=require("../../img/main-avatar.jpg"))
+                    .auth__name
                         | Никитина Мария
-                    .auth-intro__descr
+                    .auth__descr
                         | Личный сайт веб разработчика
-                    .auth-intro__socials
+                    .auth__socials
                         .socials.socials__index
                             ul.social__list
                                 li.social__item
@@ -31,10 +31,49 @@ block content
                                 a(href='./work.html').buttons__link
                                     | Мои работы
                             li.buttons__item
-                                span Обо мне
+                                a(href='./about.html').buttons__link
+                                    | Обо мне
                             li.buttons__item
-                                span Блог
+                                a(href='./blog.html').buttons__link
+                                    | Блог
                     .test-block
-                .auth-form
+                //- .auth-backside
+                //- 	form.auth-form
+                //- 		.subtitle.subtitle__intro
+                //- 			h3.subtitle__text
+                //- 				| Авторизуйтесь
+                //- 		.auth-form__elem.auth-form__elem_login
+                //- 			+icon('login','login-main')
+                //- 			label(label for="auth-login" name="auth-login" class="auth-form__label")
+                //- 			input(type="text" id="auth-login" class="auth-form__input" placeholder="Логин")
+                //- 		.auth-form__elem.auth-form__elem_password
+                //- 			+icon('password','password-main')
+                //- 			label(label for="auth-password" name="auth-password" class="auth-form__label")
+                //- 			input(type="text" id="auth-password" class="auth-form__input" placeholder="Пароль")
+                //- 		.auth-form__check
+                //- 			input(type="checkbox" name="auth-form__checkbox-name" id="ch" class="auth-form__checkbox-name")
+                //- 			label(for="ch" class="auth-form__checkbox")
+                //- 				span
+                //- 				|Я человек
+                //- 		.auth-form__question
+                //- 			| Вы точно не робот?
+                //- 		.auth-form__radios
+                //- 			.auth-form__radio
+                //- 				input(type="radio" name="r-choice" id="r1" class="auth-form__radio-elem")
+                //- 				label(for="r1" class="auth-form__radio-name")
+                //- 					span.custom
+                //- 					span.answer
+                //- 							| Да
+                //- 			.auth-form__radio
+                //- 				input(type="radio" name="r-choice" id="r2" class="auth-form__radio-elem")
+                //- 				label(for="r2" class="auth-form__radio-name")
+                //- 					span.custom
+                //- 					span.answer
+                //- 							| Не уверен
+                //- 		.auth-form__controls
+                //- 				button(type="submit" class="btn")
+                //- 					span: | На главную
+                //- 				button(type="reset" class="btn")
+                //- 					span: | Войти
         .wellcome-footer
-            .wellcome-footer__text © Никитина Мария | создано с любовью в LoftSchool | 2017
+            .wellcome-footer__text © Мария Никитина  | создано с любовью в LoftSchool | 2017
