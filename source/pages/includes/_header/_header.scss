@@ -1,3 +1,58 @@
+// @import '../../../style/main.scss';
+$green: #6c9c5a;
+$lightgreen: #4e8839;
+$darkgreen: #566358;
+$gray: #373e42;
+$error: #e44845;
+
+//Шрифты
+$mainfont: 'robotoregular';
+$mediumfont: 'robotomedium';
+$titles: 'sansus_webissimoregular';
+$light: 'robotolight';
+$lightitalic: 'robotolight_italic';
+$bold: 'robotobold';
+$bolditalic: 'robotobold_italic';
+$italic: 'robotoitalic';
+
+$desktop: 75rem;
+$laptop: 1200px;
+$tablets: 768px;
+$phones: 550px;
+
+.menu-open {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 999;
+    top: -100%;
+    position: absolute;
+    transition: 1s;
+    opacity: 0;
+  }
+  &__link {
+    font-size: 63px;
+    line-height: 53px;
+    font-family: $titles;
+    color: #fff;
+    text-decoration: none;
+    &:after {
+      content: "";
+      display: block;
+      width: 90px;
+      height: 3px;
+      background-color: #fff;
+      margin: 25px auto;
+      opacity: 0;
+      transition: .5s;
+    }
+    &:hover:after {
+      opacity: 1;
+    }
+  }
+}
+
 .top-bar {
   padding-top: 28px;
   display: flex;
@@ -13,11 +68,12 @@
   &__top {
     width: 138px;
     margin: 0 0 0 30px;
+    z-index: 1;
   }
 }
 
 .social__list {
-  display: flex;
+  display: flex
   // justify-content: space-between;
 }
 
@@ -29,7 +85,44 @@
 }
 .hamburger-menu {
   margin-right: 30px;
+  z-index: 999;
 }
+
+.hamburger .line{
+  width: 30px;
+  height: 4px;
+  background-color: #ecf0f1;
+  display: block;
+  margin: 4px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover{
+  cursor: pointer;
+}
+
+
+#hamburger.is-active .line:nth-child(2){
+  opacity: 0;
+}
+
+#hamburger.is-active .line:nth-child(1){
+  -webkit-transform: translateY(8px) rotate(45deg);
+  -ms-transform: translateY(8px) rotate(45deg);
+  -o-transform: translateY(8px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
+}
+
+#hamburger.is-active .line:nth-child(3){
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+  -ms-transform: translateY(-8px) rotate(-45deg);
+  -o-transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+
 
 // .icon {
 // 	height: 22px;
@@ -59,7 +152,7 @@
 // 	}
 // }
 
-.works-intro {
+.auth-intro {
   margin: 0 auto;
   border-radius: 5px;
   height: 80%;
@@ -84,6 +177,7 @@
 
 .auth-intro__avatar{
   margin: 0 auto 20px;
+  min-height: 140px;
 }
 
 .auth-intro__name {
@@ -124,7 +218,7 @@
   }
 }
 
-.works-intro__info {
+.auth-intro__info {
   display: flex;
   flex-direction: column;
   justify-content: space-around;

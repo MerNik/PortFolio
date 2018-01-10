@@ -1,5 +1,5 @@
 @import '../../style/main.scss';
-@import '../includes/_header/_header.scss';
+// @import '../includes/_header/_header.scss';
 @import '../includes/_footer/_footer.scss';
 
 .works-header {
@@ -9,6 +9,9 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
+  background-position-y: 30%;
+
 }
 
 .figure-cut {
@@ -223,14 +226,14 @@
       background-image: url('../../img/rev_quotes.png');
     }
   }
-  &__name span{
+  &__name {
     font-family: $bolditalic;
     color:$lightgreen;
     text-align: center;
     line-height: 24px;
     display: block;
   }
-  &__occ span {
+  &__occ {
     font-family: $italic;
     text-align: center;
     display: block;

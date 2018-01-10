@@ -7,3 +7,8 @@ mixin shadowTitle(name,mod)
     - mod = mod || ''
     svg(class="shadowTitle shadowTitle-" + name + ' ' + mod)
         use(xlink:href=require("../../img/sprite.svg") + "#" + name)
+
+mixin preloader(name, mod)
+    - mod = mod || ''
+    svg
+        use(xlink:href=require("../../img/forest.svg") + "#" + name)

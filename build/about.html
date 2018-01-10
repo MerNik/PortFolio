@@ -6,8 +6,26 @@
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <meta charset="UTF-8">
     <title>Обо мне</title>
-    <link href="./css/about.css" rel="stylesheet"></head>
+    <link href="./css/about.css" rel="stylesheet"><link href="./css/main.css" rel="stylesheet"></head>
 <body>
+<div class="preloader">
+    <div class="preloader__content">
+        <div class="preloader__percents">0 %</div>
+        <div class="preloader__waves">
+            <svg id="preloader" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="80px" height="95.113px" viewbox="0 0 80 95.113" enable-background="new 0 0 80 95.113" xml:space="preserve">
+            <g>
+              <path class="first-wave" fill="none" stroke-dasharray="100" stroke-width="3.9003" stroke-miterlimit="10" d="M0,38.005c6.663,0,6.663,7.801,13.327,7.801							c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801							c6.67,0,6.67,7.801,13.339,7.801S73.33,38.005,80,38.005"></path>
+            </g>
+            <g>
+              <path class="second-wave" fill="none" stroke-dasharray="100" stroke-width="3.9003" stroke-miterlimit="10" d="M0,61.684c6.663,0,6.663,7.801,13.327,7.801							c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801							c6.67,0,6.67,7.801,13.339,7.801S73.33,61.684,80,61.684"></path>
+            </g>
+            <g>
+              <path class="third-wave" fill="none" stroke-dasharray="100" stroke-width="3.9003" stroke-miterlimit="10" d="M0,85.362c6.663,0,6.663,7.801,13.327,7.801							c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801							c6.67,0,6.67,7.801,13.339,7.801S73.33,85.362,80,85.362"></path>
+            </g>
+          </svg>
+        </div>
+    </div>
+</div>
 <header class="about-header">
     <div class="top-bar">
         <div class="socials socials__top">
@@ -30,20 +48,25 @@
             </ul>
         </div>
         <div class="hamburger-menu">
-            <svg class="icon icon-hamburger white-mod">
-                <use xlink:href="images/sprite.svg#hamburger"></use>
-            </svg>
+            <div class="hamburger" id="hamburger"><span class="line"></span><span class="line"></span><span class="line"></span></div>
         </div>
     </div>
-    <div class="works-intro">
-        <div class="works-intro__info">
+    <div class="menu-open">
+        <div class="menu-open__left"></div>
+        <div class="menu-open__right"></div>
+        <ul class="menu-open__list">
+            <li class="menu-open__item"><a class="menu-open__link" href="./work.html">Мои работы</a></li>
+            <li class="menu-open__item"><a class="menu-open__link" href="./about.html">Обо мне</a></li>
+            <li class="menu-open__item"><a class="menu-open__link" href="./blog.html">Блог</a></li>
+            <li class="menu-open__item"><a class="menu-open__link" href="./index.html">Авторизация</a></li>
+        </ul>
+    </div>
+    <div class="auth-intro">
+        <div class="auth-intro__info">
             <div class="avatar auth-intro__avatar">
                 <div class="avatar__pic" style="background-image: url('images/main-avatar.jpg'); background-position: 44% 0%;  background-size: 150%;"></div><img class="visuallyHidden" src="images/main-avatar.jpg">
             </div>
-            <div class="auth-intro__name">Никитина Марияв</div>
-            <div class="auth-section__title">
-                <h2 class="auth-section__text"></h2>
-            </div>
+            <div class="auth-intro__name">Мария Никитина</div>
             <div class="auth-intro__descr">Личный сайт веб разработчика</div>
         </div>
     </div>
@@ -90,7 +113,7 @@
                 </div>
             </div>
             <div class="side-content">
-                <p class="side-descr__info">Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.					</p>
+                <p class="side-descr__info">Больше всего меня привлекет Frontend разработка, но я также знакома и могу решать не сложные задачи на Backend. Но давайте по порядку.					</p>
             </div>
             <ul class="skills-list">
                 <li class="skills-row">
@@ -219,7 +242,7 @@
                             <svg class="icon icon-skype green-mod">
                                 <use xlink:href="images/sprite.svg#skype"></use>
                             </svg></a></div>
-                        <div class="contacts-row__content">fbf</div>
+                        <div class="contacts-row__content">lvovik 6</div>
                     </div>
                 </li>
                 <li class="contacts__item">
@@ -228,7 +251,7 @@
                             <svg class="icon icon-envelope2 green-mod">
                                 <use xlink:href="images/sprite.svg#envelope2"></use>
                             </svg></a></div>
-                        <div class="contacts-row__content">mer.an.nikitina@gmail.com</div>
+                        <div class="contacts-row__content">meri.an.nikitina@gmail.com</div>
                     </div>
                 </li>
                 <li class="contacts__item">
@@ -237,7 +260,7 @@
                             <svg class="icon icon-phone2 green-mod">
                                 <use xlink:href="images/sprite.svg#phone2"></use>
                             </svg></a></div>
-                        <div class="contacts-row__content">+794356879567</div>
+                        <div class="contacts-row__content">+79117012578</div>
                     </div>
                 </li>
                 <li class="contacts__item">
@@ -254,7 +277,7 @@
     </div>
     <footer class="footer">
         <div class="footer__up">
-            <div class="footer__descr">Этот сайтсделан в рамках обучения в Школе онлайн образования LoftSchool.</div>
+            <div class="footer__descr">Этот сайт сделан в рамках обучения в Школе онлайн образования LoftSchool.</div>
             <div class="footer__links">
                 <div class="footer-nav">
                     <ul class="footer-nav__list">
@@ -293,8 +316,8 @@
             </div>
         </div>
         <div class="footer__down"><span>
-             © Никитина Мария | Создано с любовью в LoftSchool | 2017</span></div>
+             © Никитина Мария | Создано с любовью в LoftSchool | 2018</span></div>
     </footer>
 </section>
-<script type="text/javascript" src="./js/common.js"></script><script type="text/javascript" src="./js/about.js"></script></body>
+<script type="text/javascript" src="./js/common.js"></script><script type="text/javascript" src="./js/about.js"></script><script type="text/javascript" src="./js/main.js"></script></body>
 </html>

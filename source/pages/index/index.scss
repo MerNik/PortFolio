@@ -6,42 +6,67 @@ body {
 }
 
 .wellcome-page {
-  background-image: url('../../img/main_bg.jpg');
+  // background-image: url('../../img/main_bg.jpg');
   background-size: cover;
   height: 100vh;
   position: relative;
   @include phones() {
     height: auto;
   }
-  // &::before {
-  // 	background: transparent;
-  //    background: linear-gradient(to bottom, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, 0.1) 100%);
-  //    content: "";
-  //    display: block;
-  //    height: 20%;
-  //    left: 0;
-  //    position: absolute;
-  //    top: 0;
-  //    width: 100%;
-  // }
-  // &::after {
-  // 	background: transparent;
-  //    background: linear-gradient(to top, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, 0.1) 100%);
-  //    content: "";
-  //    display: block;
-  //    height: 20%;
-  //    left: 0;
-  //    position: absolute;
-  //    bottom: 0;
-  //    width: 100%;
-  // }
 }
+.Background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+
+}
+
+.Background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), transparent 50%, rgba(0, 0, 0, 0.5));
+}
+
+.Background-canvas {
+  max-width: 100%;
+  max-height: 100%;
+}
+// &::before {
+// 	background: transparent;
+//    background: linear-gradient(to bottom, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, 0.1) 100%);
+//    content: "";
+//    display: block;
+//    height: 20%;
+//    left: 0;
+//    position: absolute;
+//    top: 0;
+//    width: 100%;
+// }
+// &::after {
+// 	background: transparent;
+//    background: linear-gradient(to top, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, 0.1) 100%);
+//    content: "";
+//    display: block;
+//    height: 20%;
+//    left: 0;
+//    position: absolute;
+//    bottom: 0;
+//    width: 100%;
+// }
+
 
 .container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 95vh;
+  height: 97vh;
   position: relative;
 }
 
@@ -56,11 +81,13 @@ body {
   border: 1px solid #fff;
   color: #fff;
   font-family: $mediumfont;
-  transition: .2s;
-  // @include phones() {
-  // position: relative;
+  transition: .5s;
+  @include phones() {
+    left: 50%;
+    right: auto;
+    margin-left: -90px;
 
-  // }
+  }
   &:hover {
     background-color: $lightgreen;
     border-color: #538643;
@@ -68,19 +95,48 @@ body {
   }
 }
 
+
+.flip {
+  margin: 0 auto;
+  width: 380px;
+  height: 420px;
+  perspective: 1000;
+  @include phones() {
+    max-width: 300px;
+  }
+}
+.rotated {
+  transform: rotateY(180deg);
+}
+
 .auth {
-  // margin: 0 auto;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  // perspective: 1000px;
+
 
   &__intro {
-    margin: 0 auto;
+    // margin: 0 auto;
     border-radius: 5px;
-    width: 380px;
-    max-width: 80%;
-    height: 395px;
+    width: 100%;
+    // max-width: 80%;
+    height: 420px;
     display: flex;
     flex-direction: column;
     background-color: rgba(18, 38, 32, .6);
     overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    //  @include phones() {
+    // 	max-width: 80%;
+    // }
   }
 }
 
@@ -120,7 +176,7 @@ body {
 }
 
 .auth__socials {
-  margin-bottom: 40px;
+  margin-bottom: 56px;
 }
 
 .socials {
@@ -162,7 +218,7 @@ body {
 
 .auth-intro__buttons {
   height: 45px;
-  background-color: red;
+  // background-color: red;
   border-radius: 0 0 5px 5px;
 }
 
@@ -212,15 +268,21 @@ body {
   }
 }
 
-.auth-backside {
-  max-width: 380px;
+.auth__backside {
+  width: 100%;
   height: 420px;
   background-color: rgba(18,38,32,.6);
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  @include phones() {
-    height: auto;
-  }
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+  z-index: 2;
+  // @include phones() {
+  // max-width: 80%;
+  // }
 
 }
 
@@ -242,7 +304,7 @@ body {
   }
 }
 .subtitle__intro {
-  padding-top: 35px;
+  padding-top: 20px;
   color: #fff;
   &::after {
     display: block;
@@ -284,7 +346,7 @@ body {
 
 .auth-form__check {
   display: block;
-  margin: 0 20px 20px;
+  margin: 0 20px 18px;
   width: 80%;
   text-align: center;
 }
@@ -310,7 +372,7 @@ body {
 }
 
 .auth-form__question {
-  margin: 0 20px 15px;
+  margin: 0 20px 10px;
   font-family: $bold;
 }
 
@@ -391,7 +453,7 @@ input[type="radio"]:checked + label .custom +.answer{
   width: 100%;
   height: 45px;
   position: absolute;
-  bottom: -45px;
+  bottom: 0;
   border-radius: 0 0 5px 5px;
   display: flex;
   justify-content: space-between;
